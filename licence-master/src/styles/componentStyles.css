@@ -1,0 +1,57 @@
+#logo{
+    position: absolute;
+    left: 10;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#headerBar{
+    width: 100vw;
+    height: 60px;
+    padding-top:10px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 100%);
+    position:relative;
+}
+
+#customButton{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 100%);
+    position: relative;
+    margin: 10px;
+    border-radius: 30px;
+}
+#customButton:hover {
+    background: radial-gradient(ellipse farthest-corner at left top, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at right bottom, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    transform: scale(1.05);
+}
+
+#customButton:active {
+    transform: scale(0.95); 
+}
+
+#footerBar{
+    height: 40px;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    background: radial-gradient(ellipse farthest-corner at left top, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at right bottom, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+#linkContainer{
+    display: flex;
+    gap: 30px;
+}
+
+#linkContainer:hover{
+    cursor: pointer;
+}
