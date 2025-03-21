@@ -4,10 +4,17 @@ import HeaderBar from './components/Headerbar'
 import InputField from './components/InputField'
 import CustomButton from './components/CustomButton';
 import Footer from './components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  
+  const navigate = useNavigate()
+
+    function handleNavigation(route: string) {
+        navigate(route)
+    }
 
   return (
     <>
@@ -24,7 +31,7 @@ function App() {
             <InputField type="password" title="Password: " placeholder="Password" value={password} onValueChange={password => setPassword(password)}/>
           </div>
           <CustomButton title='Login' onPress={() => {}}/>
-          <CustomButton title='Create Account' onPress={() => {}}/>
+          <CustomButton title='Create Account' onPress={() => handleNavigation("/CreateAccount")}/>
         </div>
         <Footer />
       </div>

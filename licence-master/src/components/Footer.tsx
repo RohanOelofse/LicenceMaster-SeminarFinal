@@ -8,9 +8,10 @@ function Footer() {
         <div id = "footerBar">
             <div id = "linkContainer">
                 <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/about")}>About Us</p>
-                <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/about")}>Contact Us</p>
+                <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/ContactUs")}>Contact Us</p>
             </div>
             <div>
+                <img src = "/logo/NEFlag.png" style={{width:"90px", height:"45px", marginRight:"5px", marginBottom: "10px", cursor: "pointer"}} onClick={() => window.location.href = "https://dmv.nebraska.gov/"}/>
             </div>
         </div>
     );
