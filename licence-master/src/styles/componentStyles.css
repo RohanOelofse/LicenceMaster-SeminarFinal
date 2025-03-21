@@ -21,6 +21,7 @@
     position: relative;
     margin: 10px;
     border-radius: 30px;
+    border-color: #ffffff;
 }
 #customButton:hover {
     background: radial-gradient(ellipse farthest-corner at left top, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
@@ -54,4 +55,21 @@
 
 #linkContainer:hover{
     cursor: pointer;
+}
+
+#appContainer {
+    min-height: calc(100vh - 40px); /* Ensure the container takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; /* Add space for the footer */
+}
+
+#contactBorder{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 5px solid #d199289a;
+    padding: 75px;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
