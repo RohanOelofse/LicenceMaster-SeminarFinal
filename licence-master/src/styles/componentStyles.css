@@ -23,6 +23,7 @@
     border-radius: 30px;
     border-color: #ffffff;
 }
+
 #customButton:hover {
     background: radial-gradient(ellipse farthest-corner at left top, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
                 radial-gradient(ellipse farthest-corner at right bottom, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
@@ -30,6 +31,25 @@
 }
 
 #customButton:active {
+    transform: scale(0.95); 
+}
+
+#customButtonBlue{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #002A86 0%, #003BAA 8%, #002A86 30%, #001F5E 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #D6E4FF 8%, #A3B8E0 25%, #002A86 100%);
+    position: relative;
+    margin: 10px;
+    border-radius: 30px;
+    border-color: #ffffff;
+}
+
+#customButtonBlue:hover{
+    background: radial-gradient(ellipse farthest-corner at left top, #002A86 0%, #003BAA 8%, #002A86 30%, #001F5E 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at right bottom, #D6E4FF 8%, #A3B8E0 25%, #002A86 100%);
+    transform: scale(1.05);
+}
+
+#customButtonBlue:active {
     transform: scale(0.95); 
 }
 
