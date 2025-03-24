@@ -17,7 +17,7 @@ function CreateAccount() {
 
     return (
         <>
-            <div>
+            <div id="appContainer">
                 <HeaderBar />
             <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px"}}>
                 <h1 style={{color: "#000"}}>Sign Up</h1>
@@ -25,7 +25,7 @@ function CreateAccount() {
                     <InputField type="" title="Email: " placeholder="Email" value={email} onValueChange={email => setEmail(email)}/>
                     <InputField type="password" title="Password: " placeholder="Password" value={password} onValueChange={password => setPassword(password)}/>
                 </div>
-                <CustomButton title='Create Account' onPress={() => handleNavigation("/")}/>
+                <CustomButton title='Create Account' onPress={() => handleNavigation("/MainMenu")}/>
                 <CustomButton title='Back' onPress={() => handleNavigation("/")}/>
             </div>
                 <Footer />
