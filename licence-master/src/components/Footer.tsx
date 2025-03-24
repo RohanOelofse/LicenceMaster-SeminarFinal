@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div id = "footerBar">
             <div id = "linkContainer">
-                <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/about")}>About Us</p>
+                <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/AboutUs")}>About Us</p>
                 <p style={{marginTop: 10, color:"white", fontFamily:"Arial", fontSize:20}} onClick={() => navigate("/ContactUs")}>Contact Us</p>
             </div>
             <div>
