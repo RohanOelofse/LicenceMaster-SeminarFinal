@@ -18,20 +18,18 @@ function App() {
 
   return (
     <>
-      <div>
+      <div id="appContainer">
         <HeaderBar />
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "20px"}}>
-          <h1 style={{color: "#000"}}>Login/Sign Up</h1>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px"}}>
+          <h1>Login/Sign Up</h1>
           <div style={{display: "flex", flexDirection: "column", alignItems: "left"}}>
             <InputField type="" title="Email: " placeholder="Email" value={email} onValueChange={email => setEmail(email)}/>
             <InputField type="password" title="Password: " placeholder="Password" value={password} onValueChange={password => setPassword(password)}/>
           </div>
-          <CustomButton title='Login' onPress={() => {}}/>
-          <CustomButton title='Create Account' onPress={() => handleNavigation("/CreateAccount")}/>
+          <div style={{paddingBottom: "20px", display: 'flex', flexDirection: "column", alignItems: "center"}}>
+            <CustomButton title='Login' onPress={() => handleNavigation("/MainMenu")}/>
+            <CustomButton title='Create Account' onPress={() => handleNavigation("/CreateAccount")}/>
+          </div>
         </div>
         <Footer />
       </div>
