@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from './App.tsx'
 import CreateAccount from './screens/CreateAccount.tsx';
 import ContactUs from './screens/ContactUs.tsx';
+import AboutUs from './screens/AboutUs.tsx';
+import MainMenu from './screens/MainMenu.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: "/ContactUs",
     element: <ContactUs />
+  },
+  {
+    path: "/AboutUs",
+    element: <AboutUs />
+  },
+  {
+    path: "/MainMenu",
+    element: <MainMenu />
   }
 ]);
 
