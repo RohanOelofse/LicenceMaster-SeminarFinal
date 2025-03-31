@@ -1,4 +1,5 @@
 import '../App.css'
+import "../styles/componentStyles.css"
 import HeaderBar from '../components/Headerbar'
 import CustomButton from '../components/CustomButton';
 import Footer from '../components/Footer';

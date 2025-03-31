@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../styles/componentStyles.css"
 import '../App.css'
 import HeaderBar from '../components/Headerbar'
 import InputField from '../components/InputField'
