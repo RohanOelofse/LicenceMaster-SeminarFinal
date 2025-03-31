@@ -7,6 +7,7 @@ import CreateAccount from './screens/CreateAccount.tsx';
 import ContactUs from './screens/ContactUs.tsx';
 import AboutUs from './screens/AboutUs.tsx';
 import MainMenu from './screens/MainMenu.tsx';
+import TrafficSignals from './screens/TrafficSignals.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/MainMenu",
     element: <MainMenu />
+  },
+  {
+    path: "/TrafficSignals",
+    element: <TrafficSignals />
   }
 ]);
 
