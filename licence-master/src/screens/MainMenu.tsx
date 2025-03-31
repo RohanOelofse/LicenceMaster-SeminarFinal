@@ -5,7 +5,15 @@ import CustomButton from '../components/CustomButton';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 
+
+
 function MainMenu(){
+    
+    const navigate = useNavigate()
+
+    function handleNavigation(route: string) {
+        navigate(route)
+    }
 
     return(
         <>
@@ -13,7 +21,7 @@ function MainMenu(){
                 <HeaderBar />
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px"}}>
                     <h1>Main Menu</h1>
-                    <CustomButton title='Traffic Signals' onPress={() => {}}/>
+                    <CustomButton title='Traffic Signals' onPress={() => handleNavigation("/TrafficSignals")}/>
                     <CustomButton title='Traffic Signs' onPress={() => {}}/>
                     <CustomButton title='Road Markings' onPress={() => {}}/>
                     <CustomButton title='Rules of the Road' onPress={() => {}}/>
