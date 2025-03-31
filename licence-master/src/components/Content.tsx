@@ -1,15 +1,14 @@
-interface Contentprops{
+interface contentProps{
+    key: number
     title?: string;
     image: string;
     content: string;
 }
 
-function Content(props: Contentprops){
+function Content(props: contentProps){
     return (
-        <div>
-            <div>
-                <img src={props.image} style={{}} />
-            </div>
+        <div id="contentContainer"  style={{backgroundColor: props.key % 2 === 0 ? "#A3B8E0" : "#FFF"}}>
+            <img src={props.image} style={{}} />
             <div>
                 <p>{props.content}</p>
             </div>
