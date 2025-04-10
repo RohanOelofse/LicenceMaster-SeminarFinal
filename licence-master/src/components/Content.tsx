@@ -1,5 +1,6 @@
 interface contentProps{
-    key: number
+    key?: number;
+    index: number;
     title?: string;
     image: string;
     content: string;
@@ -7,7 +8,7 @@ interface contentProps{
 
 function Content(props: contentProps){
     return (
-        <div id="contentContainer"  style={{backgroundColor: props.key % 2 === 0 ? "#A3B8E0" : "#FFF"}}>
+        <div id="contentContainer"  style={{backgroundColor: props.index % 2 === 0 ? "#A3B8E0" : "#FFF"}}>
             <img src={props.image} style={{}} />
             <div>
                 <p>{props.content}</p>

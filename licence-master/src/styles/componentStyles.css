@@ -98,7 +98,7 @@
 #contentContainer {
     width: 100%; /* Adjust width to account for padding */
     height: 150px;
-    border-bottom: 1px solid #000;
+    border-bottom: 0.5px solid #000;
     border-top: 1px solid #000;
     padding: 10px;
     display: flex;
