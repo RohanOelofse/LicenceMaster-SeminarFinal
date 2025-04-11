@@ -8,6 +8,7 @@ import ContactUs from './screens/ContactUs.tsx';
 import AboutUs from './screens/AboutUs.tsx';
 import MainMenu from './screens/MainMenu.tsx';
 import TrafficSignals from './screens/TrafficSignals.tsx';
+import PracticeExam from './screens/PracticeExam.tsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/TrafficSignals",
     element: <TrafficSignals />
+  },
+  {
+    path: "/PracticeExam",
+    element: <PracticeExam />
   }
 ]);
 
