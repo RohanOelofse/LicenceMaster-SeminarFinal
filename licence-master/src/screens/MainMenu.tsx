@@ -25,7 +25,7 @@ function MainMenu(){
                     <CustomButton title='Traffic Signs' onPress={() => {}}/>
                     <CustomButton title='Road Markings' onPress={() => {}}/>
                     <CustomButton title='Rules of the Road' onPress={() => {}}/>
-                    <CustomButton color="blue" title='Practice Exam' onPress={() => {}}/>
+                    <CustomButton color="blue" title='Practice Exam' onPress={() => handleNavigation("/PracticeExam")}/>
                 </div>
                 <Footer />
             </div>
