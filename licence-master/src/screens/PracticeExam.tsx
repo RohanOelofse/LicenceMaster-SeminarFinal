@@ -13,6 +13,7 @@ function PracticeExam(){
     const [score, setScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState("");
     const [currentQuestion, setCurrentQuestion] = useState(1);
+    const [toggleQuestion, setToggleQuestion] = useState(false);
 
     const handleNextQuestion = () => {
 
@@ -24,6 +25,10 @@ function PracticeExam(){
             setCurrentIndex(currentIndex + 1);
             setCurrentQuestion(currentQuestion + 1);
             setSelectedAnswer("");
+        }
+
+        if (currentQuestion < 11){
+            setCurrentQuestion(currentQuestion + 1);
         }
     };
 
@@ -42,6 +47,10 @@ function PracticeExam(){
         }
     };
 
+    const handleToggle = () => {
+        setToggleQuestion(!toggleQuestion);
+    };
+
     const navigate = useNavigate()
 
     function handleNavigation(route: string) {
@@ -54,6 +63,11 @@ function PracticeExam(){
                 <HeaderBar />
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "0px"}}>
                     <h1>Practice Exam</h1>
+
+                    {toggleQuestion && (
+                        <p>Score: {score} / {currentQuestion}</p>
+                    )}
+
                     {currentIndex < examQuestions.length ? (
                         <QuestionContainer
                             key={examQuestions[currentIndex].id}
@@ -71,19 +85,26 @@ function PracticeExam(){
                         <div style={{ textAlign: "center" }}>
                             <h2>Exam Completed!</h2>
                             <p>Your Score: {score} / {examQuestions.length}</p>
-                            <CustomButton color="blue" title="Main Menu" onPress={() => handleNavigation("/MainMenu")}/>
                         </div>
                     )}
-                    {currentIndex < examQuestions.length -1 ? (
+                    {currentIndex < examQuestions.length -1 && currentIndex < 9 && (
                         <div>
+                            {/* <p>{currentIndex}</p> */}
                             <CustomButton title="Previous Question" onPress={handlePrevQuestion} />
                             <CustomButton title="Next Question" onPress={handleNextQuestion} />
                         </div>
-                    ) : (
-                        <CustomButton title="Finish" onPress={handleNextQuestion} />
+                    )}
+                    {currentIndex === 9 && (
+                        <div>
+                            {/* <p>{currentIndex}</p> */}
+                            <CustomButton title="Previous Question" onPress={handlePrevQuestion} />
+                            <CustomButton title="Finish" onPress={handleNextQuestion} />
+                        </div>
+                    )}
+                    {currentIndex < 10 && (
+                        <CustomButton title="Show Current Score" onPress={handleToggle} />
                     )}
                     <CustomButton color= 'blue' title='Main Menu' onPress={() => handleNavigation('/MainMenu')} />
-                    <p>Score: {score} / {currentQuestion}</p>
                 </div>
             </div>
         </>
