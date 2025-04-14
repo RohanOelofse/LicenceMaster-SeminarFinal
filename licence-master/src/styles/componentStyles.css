@@ -107,3 +107,37 @@
     position: relative;
     box-sizing: border-box; /* Include padding and border in the element's total width */
 }
+
+.question-container {
+    width: 100%; /* Adjust the width to fit nicely on the page */
+    height: 100%;
+    max-width: 600px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    padding: 20px; /* Add padding inside the container */
+    border: 2px solid #ccc; /* Add a light border */
+    border-radius: 10px; /* Round the corners */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: Arial, sans-serif; /* Set a clean font */
+}
+
+.question-container legend {
+    font-size: 1.5rem; /* Slightly larger font for the question */
+    font-weight: bold; /* Make the question stand out */
+    color: #333; /* Darker text color */
+    margin-bottom: 10px; /* Add spacing below the legend */
+}
+
+.question-container div {
+    margin-bottom: 10px; /* Add spacing between radio button groups */
+}
+
+.question-container input[type="radio"] {
+    margin-right: 10px; /* Add spacing between the radio button and the label */
+}
+
+.question-container p {
+    font-size: 1.1rem; /* Slightly smaller font for the selected answer */
+    color: #666; /* Subtle text color */
+    margin-top: 15px; /* Add spacing above the selected answer text */
+}

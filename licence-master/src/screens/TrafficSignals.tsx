@@ -21,8 +21,8 @@ function TrafficSignals(){
                 <HeaderBar />
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "0px"}}>
                     <h1>Traffic Signals</h1>
-                    {trafficSignalData.map((signal) => (
-                            <Content key={signal.id} image={signal.image} content={signal.information} />
+                    {trafficSignalData.map((signal, index) => (
+                            <Content index ={index} key={signal.id} image={signal.image} content={signal.information} />
                         ))}
                 </div>
                 <div>
