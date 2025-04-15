@@ -78,15 +78,19 @@ const trafficSignalData = [
     },
     {
         id: 11,
-        image: '/TrafficSignals/green.png',
-        information: `Green. Go - A vehicle may proceed through an intersection in the direction
-            indicated by the signal if the roadway is clear.`
+        image: '/TrafficSignals/redX.png',
+        information: `Never drive in a lane under a red "X" signal.`
     },
     {
         id: 12,
-        image: '/TrafficSignals/green.png',
-        information: `Green. Go - A vehicle may proceed through an intersection in the direction
-            indicated by the signal if the roadway is clear.`
+        image: '/TrafficSignals/yellowX.png',
+        information: `A steady yellow "X" signal means the driver should move out of the lane
+            as soon as safely possible as a red "X" will soon appear.`
+    },
+    {
+        id: 13,
+        image: '/TrafficSignals/downwardGreenArrow.png',
+        information: `It is permitted to drive in a lane under a downward green arrow symbol`
     },
 
 ];

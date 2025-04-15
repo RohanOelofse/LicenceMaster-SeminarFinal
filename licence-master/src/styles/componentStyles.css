@@ -96,7 +96,7 @@
 }
 
 #contentContainer {
-    width: 100%; /* Adjust width to account for padding */
+    width: 100%; 
     height: 150px;
     border-bottom: 0.5px solid #000;
     border-top: 1px solid #000;
@@ -105,39 +105,39 @@
     gap: 15px;
     align-items: center;
     position: relative;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    box-sizing: border-box; 
 }
 
 .question-container {
-    width: 100%; /* Adjust the width to fit nicely on the page */
+    width: 100%; 
     height: 100%;
-    max-width: 600px; /* Limit the maximum width */
-    margin: 20px auto; /* Center the container and add vertical spacing */
-    padding: 20px; /* Add padding inside the container */
-    border: 2px solid #ccc; /* Add a light border */
-    border-radius: 10px; /* Round the corners */
-    background-color: #f9f9f9; /* Light background color for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    font-family: Arial, sans-serif; /* Set a clean font */
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px #D1B464; 
+    font-family: Arial, sans-serif; 
 }
 
 .question-container legend {
-    font-size: 1.5rem; /* Slightly larger font for the question */
-    font-weight: bold; /* Make the question stand out */
-    color: #333; /* Darker text color */
-    margin-bottom: 10px; /* Add spacing below the legend */
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 10px; 
 }
 
 .question-container div {
-    margin-bottom: 10px; /* Add spacing between radio button groups */
+    margin-bottom: 10px;
 }
 
 .question-container input[type="radio"] {
-    margin-right: 10px; /* Add spacing between the radio button and the label */
+    margin-right: 10px;
 }
 
 .question-container p {
-    font-size: 1.1rem; /* Slightly smaller font for the selected answer */
-    color: #666; /* Subtle text color */
-    margin-top: 15px; /* Add spacing above the selected answer text */
+    font-size: 1.1rem; 
+    color: #666; 
+    margin-top: 15px; 
 }
