@@ -17,7 +17,7 @@ function TrafficSignals(){
 
     return(
         <>
-            <div id="appContainer" style={{paddingBottom: 0}}>
+            <div id="appContainer" style={{paddingBottom: 80}}>
                 <HeaderBar />
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "0px"}}>
                     <h1>Traffic Signals</h1>
@@ -25,9 +25,12 @@ function TrafficSignals(){
                             <Content index ={index} key={signal.id} image={signal.image} content={signal.information} />
                         ))}
                 </div>
-                <div>
+                <div style={{zIndex: 100, position: 'fixed', bottom: 10}}>
                     <CustomButton title='Back' onPress={() => handleNavigation('/MainMenu')} />
                     <CustomButton color= 'blue' title='Main Menu' onPress={() => handleNavigation('/MainMenu')} />
+                </div>
+                <div style={{zIndex: 100, position: 'fixed', bottom: 10, right: 10}}>
+                    <CustomButton title='Next' onPress={() => handleNavigation("")} />
                 </div>
             </div>
         </>

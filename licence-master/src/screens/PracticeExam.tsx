@@ -15,6 +15,7 @@ function PracticeExam(){
     const [currentQuestion, setCurrentQuestion] = useState(1);
     const [toggleQuestion, setToggleQuestion] = useState(false);
     const [previousCorrect, setPreviousCorrect] = useState(true);
+    const [text, setText] = useState("Show Current Score");
     // const [prevAns, setPrevAns] = useState("");
 
     const handleNextQuestion = () => {
@@ -59,6 +60,12 @@ function PracticeExam(){
 
     const handleToggle = () => {
         setToggleQuestion(!toggleQuestion);
+        if (toggleQuestion){
+            setText("Show Current Score");
+        }
+        else{
+            setText("Hide Current Score")
+        }
     };
 
     const navigate = useNavigate()
@@ -111,10 +118,8 @@ function PracticeExam(){
                             <CustomButton title="Finish" onPress={handleNextQuestion} />
                         </div>
                     )}
-                    {currentIndex < 10 && toggleQuestion === false ?(
-                        <CustomButton title="Show Current Score" onPress={handleToggle} />
-                    ) : (
-                        <CustomButton title="Hide Current Score" onPress={handleToggle} />
+                    {currentIndex < 10 && (
+                        <CustomButton title={text} onPress={handleToggle} />
                     )}
                     <CustomButton color= 'blue' title='Main Menu' onPress={() => handleNavigation('/MainMenu')} />
                 </div>
