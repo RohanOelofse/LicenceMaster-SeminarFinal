@@ -14,11 +14,17 @@ function PracticeExam(){
     const [selectedAnswer, setSelectedAnswer] = useState("");
     const [currentQuestion, setCurrentQuestion] = useState(1);
     const [toggleQuestion, setToggleQuestion] = useState(false);
+    const [previousCorrect, setPreviousCorrect] = useState(true);
+    // const [prevAns, setPrevAns] = useState("");
 
     const handleNextQuestion = () => {
 
         if (selectedAnswer === examQuestions[currentIndex].correctAnswer) {
             setScore(score + 1);
+            setPreviousCorrect(true);
+        }
+        else{
+            setPreviousCorrect(false);
         }
 
         if (currentIndex <= examQuestions.length - 1) {
@@ -30,19 +36,23 @@ function PracticeExam(){
         if (currentQuestion < 11){
             setCurrentQuestion(currentQuestion + 1);
         }
+
+        // setPrevAns(selectedAnswer);
+
     };
 
     const handleAnswerSelection = (answer: string) => {
-        setSelectedAnswer(answer); // Update the selected answer
+        setSelectedAnswer(answer);
     };
 
     const handlePrevQuestion = () => {
         if (currentIndex > 0 && currentIndex <= examQuestions.length - 1) {
             setCurrentIndex(currentIndex - 1);
             setCurrentQuestion(currentQuestion - 1);
+            // setSelectedAnswer(prevAns);
         }
 
-        if (score > 0){
+        if (previousCorrect){
             setScore(score - 1);
         }
     };
@@ -101,8 +111,10 @@ function PracticeExam(){
                             <CustomButton title="Finish" onPress={handleNextQuestion} />
                         </div>
                     )}
-                    {currentIndex < 10 && (
+                    {currentIndex < 10 && toggleQuestion === false ?(
                         <CustomButton title="Show Current Score" onPress={handleToggle} />
+                    ) : (
+                        <CustomButton title="Hide Current Score" onPress={handleToggle} />
                     )}
                     <CustomButton color= 'blue' title='Main Menu' onPress={() => handleNavigation('/MainMenu')} />
                 </div>
