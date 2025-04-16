@@ -18,6 +18,7 @@ function PracticeExam(){
     const [text, setText] = useState("Show Current Score");
     // const [prevAns, setPrevAns] = useState("");
 
+
     const handleNextQuestion = () => {
 
         if (selectedAnswer === examQuestions[currentIndex].correctAnswer) {
