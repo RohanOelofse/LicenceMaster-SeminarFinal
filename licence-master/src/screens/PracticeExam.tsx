@@ -104,13 +104,16 @@ function PracticeExam(){
                             <p>Your Score: {score} / {examQuestions.length}</p>
                         </div>
                     )}
-                    {currentIndex < examQuestions.length -1 && currentIndex < 9 && (
-                        <div>
-                            {/* <p>{currentIndex}</p> */}
-                            <CustomButton title="Previous Question" onPress={handlePrevQuestion} />
-                            <CustomButton title="Next Question" onPress={handleNextQuestion} />
-                        </div>
-                    )}
+                        {currentIndex < examQuestions.length -1 && currentIndex < 9 && (
+                            <div>
+                                {/* <p>{currentIndex}</p> */}
+                                {currentIndex > 0 && (
+                                    <CustomButton title="Previous Question" onPress={handlePrevQuestion} />
+                                )}
+                                <CustomButton title="Next Question" onPress={handleNextQuestion} />
+                            </div>
+                        )}
+                    
                     {currentIndex === 9 && (
                         <div>
                             {/* <p>{currentIndex}</p> */}
