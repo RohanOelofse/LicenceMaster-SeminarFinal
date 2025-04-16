@@ -22,9 +22,9 @@ function MainMenu(){
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px"}}>
                     <h1>Main Menu</h1>
                     <CustomButton title='Traffic Signals' onPress={() => handleNavigation("/TrafficSignals")}/>
-                    <CustomButton title='Traffic Signs' onPress={() => {}}/>
-                    <CustomButton title='Road Markings' onPress={() => {}}/>
-                    <CustomButton title='Rules of the Road' onPress={() => {}}/>
+                    <CustomButton title='Traffic Signs' onPress={() => handleNavigation("/TrafficSigns")}/>
+                    <CustomButton title='Road Markings' onPress={() => handleNavigation("/RoadMarkings")}/>
+                    <CustomButton title='Rules of the Road' onPress={() => handleNavigation("/RulesOfTheRoad")}/>
                     <CustomButton color="blue" title='Practice Exam' onPress={() => handleNavigation("/PracticeExam")}/>
                 </div>
                 <Footer />

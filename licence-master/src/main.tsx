@@ -9,6 +9,9 @@ import AboutUs from './screens/AboutUs.tsx';
 import MainMenu from './screens/MainMenu.tsx';
 import TrafficSignals from './screens/TrafficSignals.tsx';
 import PracticeExam from './screens/PracticeExam.tsx';
+import TrafficSigns from './screens/TrafficSigns.tsx';
+import RoadMarkings from './screens/RoadMarkings.tsx';
+import RulesOfTheRoad from './screens/RulesOfTheRoad.tsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,18 @@ const router = createBrowserRouter([
   {
     path: "/TrafficSignals",
     element: <TrafficSignals />
+  },
+  {
+    path: "/TrafficSigns",
+    element: <TrafficSigns />
+  },
+  {
+    path: "/RoadMarkings",
+    element: <RoadMarkings />
+  },
+  {
+    path: "RulesOfTheRoad",
+    element: <RulesOfTheRoad />
   },
   {
     path: "/PracticeExam",
