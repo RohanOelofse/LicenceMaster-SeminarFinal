@@ -11,6 +11,7 @@ function TrafficSigns(){
 
     const navigate = useNavigate()
 
+
     function handleNavigation(route: string) {
         navigate(route)
     }
