@@ -29,7 +29,7 @@ function RoadMarkings(){
                     <CustomButton color= 'blue' title='Main Menu' onPress={() => handleNavigation('/MainMenu')} />
                 </div>
                 <div style={{zIndex: 100, position: 'fixed', bottom: 10, right: 10}}>
-                    <CustomButton title='Next' onPress={() => handleNavigation("")} />
+                    <CustomButton title='Next' onPress={() => handleNavigation("/RulesOfTheRoad")} />
                 </div>
             </div>
         </>
